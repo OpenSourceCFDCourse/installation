@@ -109,9 +109,9 @@ of2112
 ```
 
 ## 5. Setup Visual Studio Code for OpenFOAM
-Open Visual Studio Code and follow the steps outlined below.
+*5a)* Open Visual Studio Code and follow the steps outlined below.
 
-First, install the following extensions, which will help our OpenFOAM workflow:
+*5b)* Install the following extensions, which will help our OpenFOAM workflow:
 1. *Docker*
 2. *Remote - Containers*
 3. *OpenFOAM*
@@ -120,40 +120,46 @@ First, install the following extensions, which will help our OpenFOAM workflow:
 
 ## 6. Associate OpenFOAM-specific files to enable syntax highlighting
 
+*6a)* Associate file extensions for OpenFOAM syntax highlighting.
+
 ![](associateFileExtensions.gif)
 
 ## 7. Start Docker container
-First, make sure Docker is running and you have a Docker image avilable with your OpenFOAM installation.
 
-Next, start a terminal in VS Code and run the following command to start a Docker container:
+*7a)* Maks sure Docker Desktop is running in the background.
+
+*7b)* Start a Powershell or terminal in VS Code and run the following command to start a Docker container (or use the ```of2112``` alias):
 
 ```shell
 docker container run -ti --rm -v $HOME/openfoam-data:/data -w /data openfoam:v2112
-
 ```
 
 ![](startContainer.gif)
 
+Note: If you followed step [4. Optional Save an alias for running the Docker container](#4-optional-save-an-alias-for-running-the-docker-container), you can simply use the alias:
+```shell
+of2112
+```
+
 ## 8. Attach Visual Studio Code to the running Docker container
-Attach Visual Studio Code to the running Docker container. This enables us to access the file system within the container directly in VS Code.
+*8a)* Attach Visual Studio Code to the running Docker container. This enables us to access the file system within the container directly in VS Code.
 
 ![](attachVSCode.gif)
 
 ## 9. Open a folder to access the file system within the Docker container
-From within the newly opened window open a folder at root ``/`` to gain full access to the file system of the Docker container.
+*9a)* From within the newly opened window open a folder at root ``/`` to gain full access to the file system of the Docker container.
 
 ![](openFolder.gif)
 
 ## 10. Open a terminal from within the Docker container
-Open a new terminal within the Docker container and test if OpenFOAM is sourced correctly:
+*10a)* Open a new terminal within the Docker container and test if OpenFOAM is sourced correctly:
 ```shell
 simpleFoam -help
-
 ```
 ![](terminalInContainer.gif)
-
-
 
 ## 6. Author list
 
 Jakob Hærvig
+
+Johan Rønby
