@@ -26,7 +26,7 @@ mkdir $HOME/openfoam-data
 *2b)* Next, clone this repository by:
 
 ```shell
-git clone https://github.com/jakobhaervig/openfoam-dockerfiles.git $HOME/openfoam-dockerfiles
+git clone https://github.com/OpenSourceCFDCourse/openfoam-dockerfiles.git $HOME/openfoam-dockerfiles
 ```
 
 You should now have two folder "openfoam-data" and "openfoam-dockerfiles" in your home folder.
