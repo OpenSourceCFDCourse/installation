@@ -164,13 +164,13 @@ We will be using different extensions in the two courses.
 *5a)* To extend our Docker image to include a Python installation with different useful packages:
 
 ```shell
-docker image build -t openfoam:2112 $HOME/openfoam-dockerfiles/python
+docker image build -t openfoam:2112 $HOME/openfoam-dockerfiles/python/
 ```
 
 *5b)* To extend our Docker image to include a FreeCad installation:
 
 ```shell
-docker image build -t openfoam:2112 $HOME/openfoam-dockerfiles/freecad
+docker image build -t openfoam:2112 $HOME/openfoam-dockerfiles/freecad/
 ```
 
 ## 12. Author list
